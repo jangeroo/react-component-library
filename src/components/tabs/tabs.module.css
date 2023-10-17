@@ -1,0 +1,28 @@
+.tablist {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.tab {
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--tab-background-color, grey);
+}
+
+.tab.active {
+  background-color: var(--tab-background-color, lightgrey);
+}
+
+.panel {
+  min-height: 100px;
+  padding: 20px;
+  background-color: var(--tab-background-color, lightgrey);
+}
+
+;

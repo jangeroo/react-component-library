@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+
+.slider-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-button {
+  all: unset;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.slider-button.left {
+  left: 0;
+}
+
+.slider-button.right {
+  right: 0;
+}

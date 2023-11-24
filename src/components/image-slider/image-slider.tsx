@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import classes from './image-slider.module.css'
+import { css } from '@components/helpers'
 
 type Image = {
   src: string;
@@ -33,8 +34,20 @@ export default function ImageSlider ({ images }: Props) {
         width={10000}
         height={10000}
       />
-      <button className={`${classes['slider-button']} ${classes.left}`} onClick={showPrevImage} >👈</button>
-      <button className={`${classes['slider-button']} ${classes.right}`} onClick={showNextImage} >👉</button>
+
+      <button
+        className={css(classes, ['slider-button', 'left'])}
+        onClick={showPrevImage}
+      >
+        👈
+      </button>
+      <button
+        className={css(classes, ['slider-button', 'right'])}
+        onClick={showNextImage}
+      >
+        👉
+      </button>
+
       <div>index: {focusedIndex}</div>
     </div>
   )

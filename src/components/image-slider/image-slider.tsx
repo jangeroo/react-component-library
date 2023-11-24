@@ -54,6 +54,18 @@ export default function ImageSlider ({ images }: Props) {
         <div>👉</div>
       </button>
 
+      <div className={classes['pagination']}>
+        {images.map((image, i) => (
+          <button
+            key={image.src}
+            onClick={() => setFocusedIndex(i)}
+            className={classes['page-button']}
+          >
+            {focusedIndex === i ? '🔘' : '⚪️'}
+          </button>
+        ))}
+      </div>
+
       <div>index: {focusedIndex}</div>
     </div>
   )

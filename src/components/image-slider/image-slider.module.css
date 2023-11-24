@@ -54,3 +54,23 @@
     scale: 1.4 0.6;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page-button {
+  all: unset;
+  cursor: pointer;
+  transition: scale calc(var(--transition-delay) * 0.5) ease-in-out
+}
+
+.page-button:hover {
+  scale: 1.2;
+}

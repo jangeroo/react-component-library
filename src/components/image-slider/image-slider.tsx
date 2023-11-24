@@ -27,25 +27,31 @@ export default function ImageSlider ({ images }: Props) {
 
   return (
     <div className={classes.wrapper}>
-      <Image
-        className={classes['slider-image']}
-        src={images[focusedIndex].src}
-        alt={images[focusedIndex].alt}
-        width={10000}
-        height={10000}
-      />
+      <div className={classes.images}>
+        {images.map((image, i) => (
+          <Image
+            key={image.src}
+            className={classes['slider-image']}
+            src={images[i].src}
+            alt={images[i].alt}
+            width={10000}
+            height={10000}
+            style={{ translate: `${-100 * focusedIndex}%` }}
+          />
+        ))}
+      </div>
 
       <button
         className={css(classes, ['slider-button', 'left'])}
         onClick={showPrevImage}
       >
-        👈
+        <div>👈</div>
       </button>
       <button
         className={css(classes, ['slider-button', 'right'])}
         onClick={showNextImage}
       >
-        👉
+        <div>👉</div>
       </button>
 
       <div>index: {focusedIndex}</div>
